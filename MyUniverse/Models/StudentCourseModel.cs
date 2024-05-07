@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MyUniverse.Models
 {
     [Table("Student_Courses")]
-    public class StudentCourse
+    public class StudentCourseModel
     {
         [Key]
         [Column("Student_course_ID")]
@@ -17,7 +17,7 @@ namespace MyUniverse.Models
         public int CourseId { get; set; }
         public string Status { get; set; }
 
-        public Student Student { get; set; }
-        public Course Course { get; set; }
+        public StudentModel Student { get; set; }
+        public CourseModel Course { get; set; }
     }
 }

@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyUniverse.Models
 {
-    [Table("Students")]
-    public class Student
+    [Table("Teachers")]
+    public class TeacherModel
     {
         [Key]
-        [Column("Student_ID")]
+        [Column("Teacher_ID")]
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
