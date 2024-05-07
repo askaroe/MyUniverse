@@ -1,6 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
 using MyUniverse.Data;
+using MyUniverse.Extensions;
 
 namespace MyUniverse
 {
@@ -13,6 +14,7 @@ namespace MyUniverse
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddApplicationServices(builder.Configuration);
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
