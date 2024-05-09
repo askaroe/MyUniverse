@@ -44,7 +44,7 @@ namespace MyUniverse.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Courses");
+                    b.ToTable("Courses", (string)null);
                 });
 
             modelBuilder.Entity("MyUniverse.Models.Student", b =>
@@ -74,7 +74,7 @@ namespace MyUniverse.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Students");
+                    b.ToTable("Students", (string)null);
                 });
 
             modelBuilder.Entity("MyUniverse.Models.StudentCourse", b =>
@@ -104,7 +104,7 @@ namespace MyUniverse.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("Student_Courses");
+                    b.ToTable("Student_Courses", (string)null);
                 });
 
             modelBuilder.Entity("MyUniverse.Models.Teacher", b =>
@@ -134,7 +134,7 @@ namespace MyUniverse.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Teachers");
+                    b.ToTable("Teachers", (string)null);
                 });
 
             modelBuilder.Entity("MyUniverse.Models.TeacherCourse", b =>
@@ -160,7 +160,7 @@ namespace MyUniverse.Migrations
 
                     b.HasIndex("TeacherId");
 
-                    b.ToTable("Teacher_Courses");
+                    b.ToTable("Teacher_Courses", (string)null);
                 });
 
             modelBuilder.Entity("MyUniverse.Models.StudentCourse", b =>

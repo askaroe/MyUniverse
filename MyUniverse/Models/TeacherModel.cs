@@ -4,14 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MyUniverse.Models
 {
     [Table("Teachers")]
-    public class TeacherModel
+    public class TeacherModel : UserModel
     {
-        [Key]
         [Column("Teacher_ID")]
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Email { get; set; }
-        public string PhoneNumber { get; set; }
+        public override int Id { get; set; }
     }
 }

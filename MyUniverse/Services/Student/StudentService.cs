@@ -13,15 +13,19 @@ namespace MyUniverse.Services.Student
         {
             _context = context;
         }
-        public async Task<StudentModel?> Login(LoginDto loginModel)
-        {
-            var student = await _context.Students.FirstOrDefaultAsync(s => s.Email == loginModel.Email);
 
+        public async Task<List<StudentModel>> GetAllStudents()
+        {
+            return await _context.Students.ToListAsync();
+        }
+
+        public async Task<StudentModel?> GetStudentByEmail(string email)
+        {
+            var student = await _context.Students.FirstOrDefaultAsync(x => x.Email == email);
             if (student == null)
             {
                 return null;
             }
-
             return student;
         }
 
