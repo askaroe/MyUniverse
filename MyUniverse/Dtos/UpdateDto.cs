@@ -1,11 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace MyUniverse.Models
+﻿namespace MyUniverse.Dtos
 {
-    public class UserModel
+    public class UpdateDto
     {
-        [Key]
-        public virtual int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Email { get; set; }
