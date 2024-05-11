@@ -15,7 +15,7 @@ namespace MyUniverse.Models
         [Column("Course_ID")]
         [ForeignKey("Course")]
         public int CourseId { get; set; }
-        public string Status { get; set; }
+        public string? Status { get; set; }
 
         public StudentModel Student { get; set; }
         public CourseModel Course { get; set; }

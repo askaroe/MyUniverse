@@ -1,4 +1,5 @@
-﻿using MyUniverse.Services.Student;
+﻿using MyUniverse.Services.Admin;
+using MyUniverse.Services.Student;
 
 namespace MyUniverse.Extensions
 {
@@ -8,6 +9,7 @@ namespace MyUniverse.Extensions
             IConfiguration config) 
         {
             services.AddScoped<IStudentService, StudentService>();
+            services.AddScoped<IAdminService, AdminService>();
 
             return services;
         }

@@ -1,5 +1,6 @@
 ﻿using MyUniverse.Dtos;
 using MyUniverse.Models;
+using MyUniverse.Responses;
 
 namespace MyUniverse.Services.Admin
 {
@@ -24,5 +25,7 @@ namespace MyUniverse.Services.Admin
         Task<string> AddStudentToCourse(int courseId, int studentId);
         Task<string> UpdateTeacherOnCourse(int courseId, int teacherId);
         Task<string> RemoveStudentFromCourse(int courseId, int studentId);
+        Task<string> RemoveCourseFromUsers(int  courseId, int teacherId);
+        Task<(string?, CourseTeacherStudents?)> GetCourseGroupInfo(int courseId, int teacherId);
     }
 }

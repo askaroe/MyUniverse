@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyUniverse</name>
+    </assembly>
+    <members>
+        <member name="M:MyUniverse.Controllers.AdminController.GetStudentList">
+            <summary>
+            Get students list
+            </summary>
+            <returns>List of students</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.GetTeacherList">
+            <summary>
+            Get teachers list
+            </summary>
+            <returns>List of teachers</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.GetStudentById(System.Int32)">
+            <summary>
+            Get Student with id
+            </summary>
+            <param name="id">Student id</param>
+            <returns>Result of operation, the student model if success</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.GetTeacherById(System.Int32)">
+            <summary>
+            Get Teacher with id
+            </summary>
+            <param name="id">Teacher id</param>
+            <returns>Result of operation, the teacher model if success</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.AddStudent(MyUniverse.Models.StudentModel)">
+            <summary>
+            Create new student
+            </summary>
+            <param name="newStudent">Student propeties</param>
+            <returns>Result of the operation as the string</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.AddTeacher(MyUniverse.Models.TeacherModel)">
+            <summary>
+            Create new teacher
+            </summary>
+            <param name="newTeacher">Teacher properties</param>
+            <returns>Result of the operation as the string</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.UpdateStudent(System.Int32,MyUniverse.Dtos.UpdateDto)">
+            <summary>
+            Update Student
+            </summary>
+            <param name="id">Student id</param>
+            <param name="newStudent">Updated Student properties</param>
+            <returns>Result of the operation, model if success</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.UpdateTeacher(System.Int32,MyUniverse.Dtos.UpdateDto)">
+            <summary>
+            Update Teacher properties
+            </summary>
+            <param name="id">Teacher id</param>
+            <param name="newTeacher">Updated Teacher properties</param>
+            <returns>Result of the operation, model if success</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.DeleteStudent(System.Int32)">
+            <summary>
+            Delete student
+            </summary>
+            <param name="id">Student id</param>
+            <returns>Result of the operaiton as string</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.DeleteTeacher(System.Int32)">
+            <summary>
+            Delete teacher
+            </summary>
+            <param name="id">Teacher Id</param>
+            <returns>Result of the operaiton as string</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.GetCourses">
+            <summary>
+            Get list of the courses
+            </summary>
+            <returns>List of the courses</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.GetCourseById(System.Int32)">
+            <summary>
+            Get course by id
+            </summary>
+            <param name="id">Course id</param>
+            <returns>Result of the operaiton, model if success</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.AddCourse(MyUniverse.Models.CourseModel)">
+            <summary>
+            Create new course
+            </summary>
+            <param name="newCourse">New course properties</param>
+            <returns>Result of the operaiton as string</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.UpdateCourse(System.Int32,MyUniverse.Models.CourseModel)">
+            <summary>
+            Update course properties
+            </summary>
+            <param name="id">Course id</param>
+            <param name="newCourse">Update couse properties</param>
+            <returns>Result of the operaiton, model if success</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.DeleteCourse(System.Int32)">
+            <summary>
+            Delete course
+            </summary>
+            <param name="id">Course id</param>
+            <returns>Result of the operaiton as string</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.AssignTeacherToCourse(System.Int32,System.Int32)">
+            <summary>
+            Assign teacher to the course
+            </summary>
+            <param name="courseId">Course id</param>
+            <param name="teacherId">Teacher Id</param>
+            <returns>Result of the operaiton as string</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.AddStudentToCourse(System.Int32,System.Int32)">
+            <summary>
+            Add student to the course
+            </summary>
+            <param name="courseId">Course id</param>
+            <param name="studentId">Student id</param>
+            <returns>Result of the operaiton as string</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.UpdateTeacherOnCourse(System.Int32,System.Int32)">
+            <summary>
+            Replace teacher on the course
+            </summary>
+            <param name="courseId">Couse id</param>
+            <param name="teacherId">New teacher id</param>
+            <returns>Result of the operaiton as string</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.RemoveStudentFromCourse(System.Int32,System.Int32)">
+            <summary>
+            Remove student from course
+            </summary>
+            <param name="courseId">Course id</param>
+            <param name="studentId">Student id</param>
+            <returns>Result of the operaiton as string</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.AdminController.RemoveCourseFromUsers(System.Int32,System.Int32)">
+            <summary>
+            Delete course from teacher and students
+            </summary>
+            <param name="courseId">Course id</param>
+            <param name="teacherId">Teacher id</param>
+            <returns>Result of the operaiton as string</returns>
+        </member>
+        <member name="T:MyUniverse.Migrations.InitializedTables">
+            <inheritdoc />
+        </member>
+        <member name="M:MyUniverse.Migrations.InitializedTables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MyUniverse.Migrations.InitializedTables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MyUniverse.Migrations.InitializedTables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:MyUniverse.Migrations.AddedPasswordColumnToUsers">
+            <inheritdoc />
+        </member>
+        <member name="M:MyUniverse.Migrations.AddedPasswordColumnToUsers.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MyUniverse.Migrations.AddedPasswordColumnToUsers.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MyUniverse.Migrations.AddedPasswordColumnToUsers.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:MyUniverse.Migrations.MakeStatusFieldNullableStudentCouse">
+            <inheritdoc />
+        </member>
+        <member name="M:MyUniverse.Migrations.MakeStatusFieldNullableStudentCouse.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MyUniverse.Migrations.MakeStatusFieldNullableStudentCouse.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MyUniverse.Migrations.MakeStatusFieldNullableStudentCouse.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
