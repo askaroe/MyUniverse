@@ -275,6 +275,12 @@ namespace MyUniverse.Controllers
             return Ok(await _adminService.RemoveCourseFromUsers(courseId, teacherId));
         }
 
+        /// <summary>
+        /// Get Course Info, course name, teacher name, students
+        /// </summary>
+        /// <param name="courseId">Course id</param>
+        /// <param name="teacherId">Teacher id</param>
+        /// <returns>List of Response object</returns>
         [HttpGet("courses/{courseId}/teacher/{teacherId}")]
         public async Task<ActionResult> GetCourseMembers(int courseId, int teacherId)
         {
