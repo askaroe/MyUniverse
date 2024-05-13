@@ -149,6 +149,14 @@
             <param name="teacherId">Teacher id</param>
             <returns>Result of the operaiton as string</returns>
         </member>
+        <member name="M:MyUniverse.Controllers.AdminController.GetCourseMembers(System.Int32,System.Int32)">
+            <summary>
+            Get Course Info, course name, teacher name, students
+            </summary>
+            <param name="courseId">Course id</param>
+            <param name="teacherId">Teacher id</param>
+            <returns>List of Response object</returns>
+        </member>
         <member name="T:MyUniverse.Migrations.InitializedTables">
             <inheritdoc />
         </member>
@@ -183,6 +191,30 @@
             <inheritdoc />
         </member>
         <member name="M:MyUniverse.Migrations.MakeStatusFieldNullableStudentCouse.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:MyUniverse.Migrations.InitializedTableForQA">
+            <inheritdoc />
+        </member>
+        <member name="M:MyUniverse.Migrations.InitializedTableForQA.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MyUniverse.Migrations.InitializedTableForQA.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MyUniverse.Migrations.InitializedTableForQA.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:MyUniverse.Migrations.MakedAnswerFieldNullabaleQA">
+            <inheritdoc />
+        </member>
+        <member name="M:MyUniverse.Migrations.MakedAnswerFieldNullabaleQA.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MyUniverse.Migrations.MakedAnswerFieldNullabaleQA.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MyUniverse.Migrations.MakedAnswerFieldNullabaleQA.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

@@ -14,19 +14,44 @@ namespace MyUniverse.Services.Student
             _context = context;
         }
 
-        public async Task<List<StudentModel>> GetAllStudents()
+        public async Task<string> AnswerQuestion(int questionId, string answer)
         {
-            return await _context.Students.ToListAsync();
+            var qaModel = await _context.Qas.FirstOrDefaultAsync(q => q.Id == questionId);
+            if (qaModel == null)
+            {
+                return $"The question with id: {questionId} does not exist";
+            }
+
+            qaModel.Answer = answer;
+            await _context.SaveChangesAsync();
+            return "Answer was saved successfully";
         }
 
-        public async Task<StudentModel?> GetStudentByEmail(string email)
+        public async Task<QaModel> AskQuestion(int studentId, int receiverId, string question)
         {
-            var student = await _context.Students.FirstOrDefaultAsync(x => x.Email == email);
-            if (student == null)
+            var qaModel = new QaModel
             {
-                return null;
-            }
-            return student;
+                StudentId = studentId,
+                TeacherId = receiverId,
+                QuestionDescription = question,
+                Answer = "waiting for answer..."
+            };
+
+            await _context.Qas.AddAsync(qaModel);
+            await _context.SaveChangesAsync();
+            return qaModel;
+        }
+
+        public async Task<string> DownloadFiles()
+        {
+            await Task.Delay(1000);
+
+            return "File downloaded";
+        }
+
+        public async Task<List<QaModel>> GetAllQuestions()
+        {
+            return await _context.Qas.ToListAsync();
         }
 
         public async Task<StudentModel> Register(StudentModel newStudent)
@@ -57,6 +82,11 @@ namespace MyUniverse.Services.Student
                 .Where(sc => sc.StudentId == studentId)
                 .Select(sc => sc.Course)
                 .ToListAsync();
+        }
+
+        public Task<string> UpdateProfile(int studnetId, UpdateDto updatedProfile)
+        {
+            throw new NotImplementedException();
         }
     }
 }

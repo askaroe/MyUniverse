@@ -16,6 +16,7 @@ namespace MyUniverse.Data
         public DbSet<TeacherModel> Teachers { get; set; }
         public DbSet<StudentCourseModel> StudentCourses { get; set; }
         public DbSet<TeacherCourseModel> TeacherCourses { get; set; }
+        public DbSet<QaModel> Qas { get; set; }
 
     }
 }
