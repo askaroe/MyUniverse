@@ -157,6 +157,65 @@
             <param name="teacherId">Teacher id</param>
             <returns>List of Response object</returns>
         </member>
+        <member name="M:MyUniverse.Controllers.StudentController.RegisterStudent(MyUniverse.Models.StudentModel)">
+            <summary>
+            Register student
+            </summary>
+            <param name="newStudent">New student model</param>
+            <returns>Student model</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.StudentController.GetStudentCourses(System.Int32)">
+            <summary>
+            Get student Course
+            </summary>
+            <param name="studentId">Student Id</param>
+            <returns>List of courses</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.StudentController.GetStudentCourse(System.Int32,System.Int32)">
+            <summary>
+            Get one student course
+            </summary>
+            <param name="courseId">Course id</param>
+            <param name="studentId">Student id</param>
+            <returns>Single course model</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.StudentController.UpdateStudentProfile(System.Int32,MyUniverse.Dtos.UpdateDto)">
+            <summary>
+            Update student profile
+            </summary>
+            <param name="studentId">Student Id</param>
+            <param name="updatedStudent">Updated data of student</param>
+            <returns>Result of operation as a string</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.StudentController.AskQuestion(System.Int32,System.Int32,System.String)">
+            <summary>
+            Create a question for teacher
+            </summary>
+            <param name="studentId">student id</param>
+            <param name="receiverId">receiver id(teacher)</param>
+            <param name="question">question as a string</param>
+            <returns>Question answer model</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.StudentController.AnswerQuestion(System.Int32,System.String)">
+            <summary>
+            Student answer for a question
+            </summary>
+            <param name="questionId">Question id</param>
+            <param name="answer">Answer as a string</param>
+            <returns>String as a result of a operation</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.StudentController.GetAllQuestions">
+            <summary>
+            Get all questions
+            </summary>
+            <returns>List of QA models</returns>
+        </member>
+        <member name="M:MyUniverse.Controllers.StudentController.DownloadFiles">
+            <summary>
+            Download files
+            </summary>
+            <returns>Result of a operation as a string</returns>
+        </member>
         <member name="T:MyUniverse.Migrations.InitializedTables">
             <inheritdoc />
         </member>
