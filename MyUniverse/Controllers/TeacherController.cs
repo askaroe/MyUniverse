@@ -7,9 +7,9 @@ namespace MyUniverse.Controllers
 {
     public class TeacherController : BaseApiController
     {
-        private readonly TeacherService _teacherService;
+        private readonly ITeacherService _teacherService;
 
-        public TeacherController(TeacherService teacherService)
+        public TeacherController(ITeacherService teacherService)
         {
             _teacherService = teacherService;
         }
@@ -46,7 +46,7 @@ namespace MyUniverse.Controllers
             return Ok(result.Item2);
         }
 
-        [HttpPost("teachers/{teacherId}")]
+        [HttpPut("teachers/{teacherId}")]
         public async Task<ActionResult> UpdateTeacherProfile(int teacherId, [FromBody]UpdateDto updateDto)
         {
             return Ok(await _teacherService.UpdateProfile(teacherId, updateDto));
