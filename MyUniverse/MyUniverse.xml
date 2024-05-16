@@ -216,6 +216,36 @@
             </summary>
             <returns>Result of a operation as a string</returns>
         </member>
+        <member name="M:MyUniverse.Controllers.TeacherController.RegisterTeacher(MyUniverse.Models.TeacherModel)">
+            <summary>
+            Register as a teacher
+            </summary>
+        </member>
+        <member name="M:MyUniverse.Controllers.TeacherController.AnswerQuestion(System.Int32,System.String)">
+            <summary>
+            Teacher answers to a question
+            </summary>
+        </member>
+        <member name="M:MyUniverse.Controllers.TeacherController.AddQuestion(System.Int32,System.Int32,System.String)">
+            <summary>
+            Teacher asks a question from a student
+            </summary>
+        </member>
+        <member name="M:MyUniverse.Controllers.TeacherController.UpdateTeacherProfile(System.Int32,MyUniverse.Dtos.UpdateDto)">
+            <summary>
+            Update teacher profile
+            </summary>
+        </member>
+        <member name="M:MyUniverse.Controllers.TeacherController.DownloadFiles">
+            <summary>
+            Download files
+            </summary>
+        </member>
+        <member name="M:MyUniverse.Controllers.TeacherController.GetQuestionsForTeacher(System.Int32)">
+            <summary>
+            Show questions for a specific teacher
+            </summary>
+        </member>
         <member name="T:MyUniverse.Migrations.InitializedTables">
             <inheritdoc />
         </member>

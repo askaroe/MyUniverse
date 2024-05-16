@@ -11,5 +11,6 @@ namespace MyUniverse.Services.Teacher
         Task<string> DownloadFiles();
         Task<(string?, QuestionAnswerWithNames?)> AddQuestion(int teacherId, int receiverId, string question);
         Task<TeacherModel> Register(TeacherModel newTeacher);
+        Task<List<QuestionsForTeacherWithId>> GetQuestionsForTeacher(int teacherId);
     }
 }

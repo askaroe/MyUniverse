@@ -103,6 +103,27 @@ namespace MyUniverse.Services.Teacher
             return "File downloaded";
         }
 
+        public async Task<List<QuestionsForTeacherWithId>> GetQuestionsForTeacher(int teacherId)
+        {
+            var questions = await _context.Qas
+                .Where(q => q.TeacherId == teacherId)
+                .Select(q => new QuestionsForTeacherWithId
+                {
+                    QuestionId = q.Id,
+                    Question = new QuestionAnswerWithNames
+                    {
+                        TeacherName = q.Teacher.Name,
+                        StudentName = q.Student.Name,
+                        Answer = q.Answer ?? "waiting for response...",
+                        Question = q.QuestionDescription
+                    }
+                })
+                .ToListAsync();
+
+            Console.WriteLine(questions.Count);
+            return questions;
+        }
+
         public async Task<TeacherModel> Register(TeacherModel newTeacher)
         {
             await _context.Teachers.AddAsync(newTeacher);
